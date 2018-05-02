@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+  
+<mapper namespace="cake"> 
+ 
+    <resultMap id = "result" type = "cakeland.model.Cake"> 
+       <result property = "id" column = "id"/> 
+       <result property = "name" column = "name"/> 
+       <result property = "price" column = "price"/>
+       <result property = "sostav" column = "sostav"/>
+    </resultMap> 
+    
+    <select id = "selectAll" resultMap = "result"> 
+       SELECT * FROM cake;  
+    </select> 
+
+    <select id = "selectById" parameterType = "int" resultMap = "result"> 
+       SELECT * FROM cake WHERE id = #{id}; 
+    </select> 
+    
+    
+    <update id = "update" parameterType = "cakeland.model.Cake"> 
+       UPDATE cake SET 
+        name = #{name}, 
+        price = #{price},
+        sostav = #{sostav}
+        WHERE ID = #{id}; 
+    </update> 
+  
+    <delete id = "deleteById" parameterType = "int"> 
+       DELETE from cake WHERE id = #{id}; 
+    </delete> 
+
+    <insert id = "insert" parameterType = "cakeland.model.Cake"> 
+       INSERT INTO cake (name, price, sostav)
+       VALUES (#{name}, #{price}, #{sostav});     
+    </insert>
+</mapper> 

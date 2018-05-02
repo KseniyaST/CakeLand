@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+  
+<mapper namespace="orderItem"> 
+ 
+    <resultMap id = "result" type = "cakeland.model.OrderItem"> 
+        <result property = "id" column = "id"/> 
+        <result property = "cakeid" column = "cakeid"/>
+        <result property = "orderid" column = "orderid"/>
+        <result property = "countc" column = "countc"/>
+    </resultMap> 
+   
+    <select id = "selectAll" resultMap = "result"> 
+        SELECT * FROM orderitem;  
+    </select> 
+
+    <select id = "selectById" parameterType = "int" resultMap = "result"> 
+        SELECT * FROM orderitem WHERE id = #{id}; 
+    </select> 
+    
+    <update id = "update" parameterType = "cakeland.model.OrderItem"> 
+        UPDATE order SET 
+        cakeid = #{cakeid}
+        orderid = #{orderid}
+        countc = #{countc}
+        WHERE ID = #{id}; 
+        
+        
+    </update> 
+  
+    <delete id = "deleteById" parameterType = "int">
+        Delete from orderitem where id=#{id}; 
+    </delete> 
+
+    <insert id = "insert" parameterType = "cakeland.model.Order">
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+            SELECT LAST_INSERT_ID() as id
+        </selectKey> 
+        INSERT INTO orderitem (cakeid,orderid,countc)
+        VALUES (#{cakeid},#{orderid},#{countc});     
+    </insert>
+</mapper> 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE configuration 
+   PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+   "http://mybatis.org/dtd/mybatis-3-config.dtd">  
+<configuration> 
+  <properties resource="cakeland/mybatis/comfig.properties" />
+  
+  <environments default="development"> 
+      <environment id="development"> 
+      <transactionManager type="JDBC"/> 
+      <dataSource type="POOLED"> 
+        <property name="driver" value="com.mysql.jdbc.Driver"/> 
+        <property name="url" value="jdbc:mysql://localhost/cakeland"/> 
+        <property name="username" value="root"/> 
+        <property name="password" value=""/> 
+      </dataSource> 
+    </environment> 
+  </environments> 
+  
+  <mappers> 
+    <mapper resource="cakeland/mybatis/cake.xml"/> 
+    <mapper resource="cakeland/mybatis/user.xml"/> 
+    <mapper resource="cakeland/mybatis/order.xml"/>
+    <mapper resource="cakeland/mybatis/orderitem.xml"/> 
+  </mappers> 
+  
+</configuration>
