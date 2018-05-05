@@ -1,0 +1,90 @@
+table{
+    width:100%;
+}
+h5{
+    line-height:0px;
+}
+.cake-body{
+    background-image: url("/CourseProject/images/fon.jpg");
+    background-size: 100%;
+}
+.header-wrapper{
+    width:1200px;
+    padding: 0px 25px;
+}
+.log-but-wrapp{
+    margin-right: -50px;
+}
+.cabinet{
+    margin-top:15px;
+}
+.legend-row{
+    background-color:#FF0000;
+    padding-left: 500px;
+    width: 1140px;
+}
+.all-cakes-wrapper{
+    margin-top: -40px;
+}
+.cake-table-wrapper{
+    margin-left:60px; 
+    width:1050px;
+}
+
+.cake-table{
+    background-color: white;
+}
+.content-wrapper{
+
+    width: 1200px; 
+    padding: 30px 25px;
+    margin-top: 10px;
+}
+.orders-wrapper{
+    width: 150%;
+}
+.order-info{
+    box-shadow: 1px 1px 1px black;
+    margin-left:60px;
+    margin-bottom:20px;
+    width:1050px;
+    padding: 10px;
+}
+.make-order-wrapper{
+    margin-bottom:20px;
+    width:1050px;
+    padding: 10px;
+}
+
+.main {
+
+    font-size:52px;
+    color:#FF0000;
+    text-shadow:#B6B6B6 1px -1px 0,
+        #B6B6B6 2px -2px 0,
+        #B6B6B6 3px -3px 0,
+        #B6B6B6 4px -4px 0,
+        #B6B6B6 5px -5px 0;
+    padding-left: 400px;
+}
+.menu{
+    background-color: #FF0000;
+}
+.login-wrapper{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    padding-top:200px;
+}
+.login-form{
+    padding: 20px;
+    box-shadow:0px 0px 3px black;
+    background-color: white;
+}
+.input-log{
+    width:100%;
+    height:15px;
+    border: 2px solid red;
+    border-radius: 4px;
+}
